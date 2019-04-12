@@ -16,11 +16,11 @@ class Carousel {
 
         this.rightbutton.addEventListener('click', () => this.moveright())
         this.leftbutton.addEventListener('click', () => this.moveleft())
+        
     }
 
     moveright() {
         let current = this.currentimage.dataset.number
-        let reset = this.imageindex[0]
         console.log('current is: ' + current)
 
         this.imageindex.forEach(element => {
@@ -43,31 +43,44 @@ class Carousel {
     }
 
     moveleft() {
-        let current = this.currentimage.dataset.number
-        console.log('current is: ' + current)
+        let leftcurrent = this.currentimage.dataset.number
+        console.log(leftcurrent)
 
         this.imageindex.forEach(element => {
             element.classList.remove('active-img')
         })
 
+        if (leftcurrent == 4) {
+            leftcurrent = 2
+             console.log('l4current is now: ' + leftcurrent)
+             this.currentimage = this.imageindex[leftcurrent]
+             console.log(this.currentimage)
+             this.currentimage.classList.add('active-img')
+         }
+        else if (leftcurrent == 3) {
+            leftcurrent = 1
+            console.log('l3current is now: ' + leftcurrent)
+             this.currentimage = this.imageindex[leftcurrent]
+             console.log(this.currentimage)
+             this.currentimage.classList.add('active-img')
+        }
         
+        else if (leftcurrent == 2) {
+            leftcurrent = 0
+            console.log('l2current is now: ' + leftcurrent)
+             this.currentimage = this.imageindex[leftcurrent]
+             console.log(this.currentimage)
+             this.currentimage.classList.add('active-img')
+        }
 
-        // if (current != 1) {
-        //     this.currentimage = this.imageindex[(4-current)]
-        //     console.log(this.currentimage)
-        //     this.currentimage.classList.add('active-img')
-        // }
-
-        // else {
-        //     //current = 3
-        //     this.currentimage = this.imageindex[current]
-        //     console.log(this.currentimage)
-        //     this.currentimage.classList.add('active-img')
-        // }
-
-
+        else if (leftcurrent == 1) {
+            leftcurrent = 3
+             console.log('lcurrent is now: ' + leftcurrent)
+             this.currentimage = this.imageindex[leftcurrent]
+             console.log(this.currentimage)
+             this.currentimage.classList.add('active-img')
+         }
     }
-
 }
 
 let carousel = document.querySelector('.carousel');
