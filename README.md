@@ -32,13 +32,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is a set of objects that represent the HTML of a website, accessible using commands and queries through Javascript. It allows us to grab specific or broad object groups and manipulate their styling, content, and many other attributes.
+
 2. What is an event?
+
+An interaction between the user and the webpage
 
 3. What is an event listener?
 
+An element added to part of a webpage that listens for a specific event from the user, like a click, and then invokes a function in response.
+
 4. Why would we convert a NodeList into an Array?
 
+Nodelists are live lists of the DOM elements whilst Arrays are static objects. Both can be manipulated using Javascript using different methods and properties, but it's important to realize that Nodelists change in sync with changes made to the DOM, while an array does not. It can be a good thing or a bad thing depending on the situation so it's important to think about what you're planning on doing with the type of element you want. 
+
 5. What is a component?
+
+A modular piece of a webpage designed through deliberate HTML, CSS, and Javascript in order to create a standalone format that can be quickly and easily augmented once designed, with little influence from changing the rest of the webpage design.
 
 ### Git Set up
 
