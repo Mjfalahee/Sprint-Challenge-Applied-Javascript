@@ -12,11 +12,11 @@ class TabLink {
     if(this.tabData === 'all'){
       // If `all` is true, select all cards regardless of their data attribute values
       this.cards = document.querySelectorAll('.card')
-      console.log('Grabbing ALL cards')
+      //console.log('Grabbing ALL cards')
     } else {
       // else if `all` is false, only select the cards with matching this.tabData values
       this.cards = document.querySelectorAll(`.card[data-tab='${this.tabData}']`)
-      console.log('Grabbing cards with tabData: ' + `.card[data-tab='${this.tabData}']`)
+     // console.log('Grabbing cards with tabData: ' + `.card[data-tab='${this.tabData}']`)
     }
 
      // Map over the newly converted NodeList we just created in our if statement above. Convert each this.cards element into a new instance of the TabCard class. Pass in a card object to the TabCard class. 
@@ -34,7 +34,7 @@ class TabLink {
     // Iterate through the NodeList removing the .active-tab class from each element
     tabs.forEach(element => {
       element.classList.remove('active-tab')
-      console.log('Removing active-tab!')
+      //console.log('Removing active-tab!')
     })
 
     // Select all of the elements with the .card class on them
